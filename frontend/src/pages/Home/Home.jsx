@@ -1,20 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Header from '../../Components/Header/header';
 
 
-const Page1 = () => {
+const Home = () => {
   return (
     <div>
         <nav>
           <ul>
             <li>
-              <Link to="/page2">Page 2</Link>
+            <Header />
             </li>
           </ul>
         </nav>
-      <h1>A propos</h1>
     </div>
   );
 };
 
-export default Page1;
+export default Home;
