@@ -1,0 +1,17 @@
+.properties-wrapper {
+  background: #F6F6F6;
+  border-radius: 25px;
+  padding: 50px;
+  margin: 50px 0;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 60px;
+  padding: 0;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+
