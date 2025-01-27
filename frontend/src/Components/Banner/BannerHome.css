@@ -19,9 +19,11 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centre le texte */
+    transform: translate(-50%, -50%);
     color: white;
     font-size: 48px;
     font-family: 'Montserrat';
     margin: 0;
+    width: 90%;
+    text-align: center;
 }
