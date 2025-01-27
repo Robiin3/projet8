@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Header from '../../Components/Header/header';
+import BannerHome from '../../Components/Banner/BannerHome';
 
 const Home = () => {
   return (
@@ -8,6 +8,7 @@ const Home = () => {
       <nav>
         <Header />
       </nav>
+      <BannerHome />
     </div>
   );
 };
