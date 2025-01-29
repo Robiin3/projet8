@@ -5,7 +5,7 @@ import Card from '../../Components/Card/Card';
 import './Home.css';
 
 const Home = () => {
-  const [properties, setProperties] = useState([]);
+  const [properties, setProperties] = useState([]); //
 
   useEffect(() => {
     fetch('http://localhost:8080/api/properties')
