@@ -1,7 +1,8 @@
 .collapse {
-  margin: 20px 0;
+  margin: 20px auto; /* Centre le composant */
   border-radius: 5px;
   overflow: hidden;
+  width: 85%;
 }
 
 .collapse-header {
@@ -19,12 +20,33 @@
   font-size: 18px;
 }
 
+@keyframes rotate-up {
+  0% { transform: rotate(90deg); }
+  100% { transform: rotate(-90deg); }
+}
+
+@keyframes rotate-down {
+  0% { transform: rotate(-90deg); }
+  100% { transform: rotate(90deg); }
+}
+
 .collapse-chevron.open {
-  transform: rotate(180deg);
+  animation: rotate-up 0.4s forwards;
+}
+
+.collapse-chevron.closed {
+  animation: rotate-down 0.4s forwards;
 }
 
 .collapse-content {
   background-color: #F6F6F673;
-  color: white;
-  padding: 20px;
+  color: #000000;
+  padding-right: 10px;
+  padding-left: 10px;
+  text-align: left;
+}
+
+.collapse-chevron {
+  transition: transform 0.3s ease-in-out;
+  transform-origin: 20% 50%; /* réglage du centre de rotation */
 }
