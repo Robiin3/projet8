@@ -2,7 +2,7 @@ import React from 'react';
 import './BannerHome.css';
 import BannerImg from '../../assets/Banner-home.png';
 
-function BannerHome() {
+function Banner() {
     return (
         <div className="banner-home">
             <img src={BannerImg} alt="Banner home" className="banner-home-img" />
