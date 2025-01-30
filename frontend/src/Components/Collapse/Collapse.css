@@ -41,9 +41,29 @@
 .collapse-content {
   background-color: #F6F6F673;
   color: #000000;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding: 10px;
+  padding-left: 1.5rem;
   text-align: left;
+  overflow: hidden;
+  height: 0;
+  transition: height 0.6s ease-in-out;
+}
+
+.collapse-content.animate {
+  height: auto;
+}
+
+.collapse-content p {
+  transform: translateY(-80px); /* Initialement décalé vers le haut */
+  transition: transform 0.4s;
+}
+
+.collapse-content.animate p {
+  transform: translateY(0); /* Descend à sa position normale */
+}
+
+.collapse-content.animate p.closing {
+  transform: translateY(-80px); /* Remonte vers le haut */
 }
 
 .collapse-chevron {
