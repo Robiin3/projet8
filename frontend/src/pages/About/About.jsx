@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Header from '../../Components/Header/header';
 import BannerAbout from '../../Components/Banner/BannerAbout';
 import Collapse from '../../Components/Collapse/Collapse';
 import './About.css';
@@ -8,9 +6,6 @@ import './About.css';
 const About = () => {
   return (
     <div>
-      <nav>
-        <Header />
-      </nav>
       <BannerAbout />
       <div className="about-content">
         <Collapse title="Fiabilité">

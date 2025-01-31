@@ -1,21 +1,19 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Location from './pages/Location/Location';
 import Error from './pages/Error/Error';
+import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
-
-import './App.css'
+import './App.css';
 
 const App = () => {
   return (
     <Router>
       <div>
+        <Header />
         <div className="main-content">
-          {/* Navigation */}
-
-          {/* Routes */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="Home" element={<Home />} />
