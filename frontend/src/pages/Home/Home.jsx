@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import BannerHome from '../../Components/Banner/BannerHome';
+import Banner from '../../Components/Banner/Banner';
 import Card from '../../Components/Card/Card';
 import './Home.css';
+import BannerImg from '../../assets/Banner-home.png';
 
 const Home = () => {
   const [properties, setProperties] = useState([]);
@@ -15,7 +16,7 @@ const Home = () => {
 
   return (
     <div>
-      <BannerHome />
+      <Banner title="Chez vous, partout et ailleurs" image={BannerImg} />
       <div className="properties-wrapper">
         <div className="cards-container">
           {properties.map(property => (

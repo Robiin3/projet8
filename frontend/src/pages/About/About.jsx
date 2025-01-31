@@ -1,12 +1,13 @@
 import React from 'react';
-import BannerAbout from '../../Components/Banner/BannerAbout';
+import Banner from '../../Components/Banner/Banner';
 import Collapse from '../../Components/Collapse/Collapse';
 import './About.css';
+import BannerImg from '../../assets/Banner-about.png';
 
 const About = () => {
   return (
     <div>
-      <BannerAbout />
+      <Banner image={BannerImg} />
       <div className="about-content">
         <Collapse title="Fiabilité">
           <p>Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.</p>
