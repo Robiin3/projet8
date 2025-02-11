@@ -1,6 +1,13 @@
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    padding-bottom: 10px;
+}
 
 .footer-logo {
-    width: 100%;
+    width: 122px;
 }
 
 
