@@ -5,7 +5,8 @@
 }
 
 .main-content {
-  margin: 45px 100px 0 100px;
+  max-width: 1240px;
   text-align: center;
+  margin: 0 auto; /* Center horizontally */
 }
 

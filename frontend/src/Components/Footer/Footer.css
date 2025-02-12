@@ -10,4 +10,12 @@ footer {
     width: 122px;
 }
 
+@media (max-width: 768px) {
+    footer p {
+        width: 100%;
+        margin: 0 auto;
+        word-wrap: break-word; /* retour à la ligne */
+    }
+}
+
 
