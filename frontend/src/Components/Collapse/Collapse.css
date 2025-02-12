@@ -55,7 +55,7 @@
 }
 
 .collapse-content p {
-  transform: translateY(-80px); /* Initialement décalé vers le haut */
+  transform: translateY(-120px); /* Initialement décalé vers le haut */
   transition: transform 0.4s;
 }
 
@@ -64,10 +64,16 @@
 }
 
 .collapse-content.animate p.closing {
-  transform: translateY(-80px); /* Remonte vers le haut */
+  transform: translateY(-120px); /* Remonte vers le haut */
 }
 
 .collapse-chevron {
   transition: transform 0.3s ease-in-out;
   transform-origin: 20% 50%; /* réglage du centre de rotation */
+}
+
+@media (max-width: 768px) {
+  .collapse {
+    width: 100%;
+  }
 }

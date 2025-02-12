@@ -11,10 +11,14 @@ footer {
 }
 
 @media (max-width: 768px) {
+
     footer p {
-        width: 100%;
+        width: 110px;
         margin: 0 auto;
-        word-wrap: break-word; /* retour à la ligne */
+        word-wrap: break-word; /* Retour à la ligne */
+        font-size: 12px;
+        padding-bottom: 30px;
+
     }
 }
 
