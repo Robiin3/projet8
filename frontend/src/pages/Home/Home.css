@@ -7,11 +7,25 @@
 
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
   gap: 60px;
   padding: 0;
   max-width: 1240px;
   margin: 0 auto;
+  justify-content: center;
 }
 
 
+@media (max-width: 768px) {
+  .properties-wrapper {
+    background: none;
+    padding: 0;
+    margin: 25px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    gap: 22px;
+  }
+}

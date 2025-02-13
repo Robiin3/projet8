@@ -35,5 +35,18 @@
 
     .banner {        
         height: 111px;
+        margin-top: 25px;
+        border-radius: 10px;
+    }
+
+    .banner-img {
+        border-radius: 10px;
+    }
+
+    .banner-text {
+        font-size: 24px;
+        text-align: left;
+        left: 10px;
+        transform: translateY(-50%);
     }
 }
