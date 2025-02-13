@@ -1,6 +1,6 @@
 .card {
   position: relative;
-  width: 340px;
+  width: 100%; /* Adapt to available width */
   height: 340px;
   border-radius: 10px;
   overflow: hidden;
@@ -31,7 +31,6 @@
 
 @media (max-width: 768px) {
   .card {
-    width: 335px;
     height: 255px;
   }
 }
