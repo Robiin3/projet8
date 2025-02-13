@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Carousel.css';
-import { ArrowBackIos, ArrowForwardIos } from '@mui/icons-material';
+import VectorRight from '../../assets/Vector-right.png';
+import VectorLeft from '../../assets/Vector-left.png';
 
 const Carousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -16,11 +17,11 @@ const Carousel = ({ images }) => {
   return (
     <div className="carousel">
       <button onClick={handlePrev} className="carousel-button">
-        <ArrowBackIos />
+        <img src={VectorLeft} alt="Previous" />
       </button>
       <img src={images[currentIndex]} alt={`Slide ${currentIndex}`} className="carousel-image" />
       <button onClick={handleNext} className="carousel-button">
-        <ArrowForwardIos />
+        <img src={VectorRight} alt="Next" />
       </button>
     </div>
   );

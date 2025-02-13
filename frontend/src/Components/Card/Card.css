@@ -1,6 +1,6 @@
 .card {
   position: relative;
-  width: 100%; /* Adapt to available width */
+  width: 100%;
   height: 340px;
   border-radius: 10px;
   overflow: hidden;
