@@ -4,24 +4,24 @@ import Carousel from '../../Components/Carousel/Carousel';
 import './Location.css';
 
 const Location = () => {
-  const { id } = useParams();
-  const [property, setProperty] = useState(null);
+  const { id } = useParams(); // Récupère l'id de la propriété depuis l'URL
+  const [property, setProperty] = useState(null); // Initialise un état property avec la valeur null
 
-  useEffect(() => {
+  useEffect(() => { // Récupère les données de la propriété depuis l'API
     fetch(`http://localhost:8080/api/properties/${id}`)
-      .then(response => response.json())
-      .then(data => setProperty(data))
+      .then(response => response.json()) // Convertit la réponse en JSON
+      .then(data => setProperty(data)) // Met à jour l'état property avec les données
       .catch(error => console.error('Error:', error));
-  }, [id]);
+  }, [id]); // Exécute l'effet uniquement lorsque l'id change
 
-  if (!property) {
-    return <div>Loading...</div>;
-  }
-
-  return (
+  return ( // Affiche le carrousel avec les images et le titre de la propriété
     <div>
-      <Carousel images={property.pictures} />
-      <h1>{property.title}</h1>
+      {property && ( // Vérifie si la propriété est définie
+        <>
+          <Carousel images={property.pictures} />
+          <h1>{property.title}</h1> 
+        </>
+      )}
     </div>
   );
 };

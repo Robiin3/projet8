@@ -7,8 +7,10 @@ import BannerImg from '../../assets/Banner-about.png';
 const About = () => {
   return (
     <div>
+      {/* Affiche la bannière avec l'image spécifiée */}
       <Banner image={BannerImg} />
       <div className="about-content">
+        {/* Affiche les sections collapse avec leurs titres et contenus */}
         <Collapse title="Fiabilité">
           <p>Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.</p>
         </Collapse>

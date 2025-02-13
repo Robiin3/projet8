@@ -27,10 +27,9 @@
   height: 100%;
 }
 
-/* Supprime aussi le contour en mode focus */
+/* Supprime le contour en mode focus */
 .carousel-button:focus {
   outline: none;
-  box-shadow: none; /* Évite un effet de halo sur certains navigateurs */
 }
 
 .carousel-button:first-of-type {
@@ -39,6 +38,15 @@
 
 .carousel-button:last-of-type {
   right: 10px;
+}
+
+.carousel-counter {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  padding: 5px 10px;
 }
 
 @media (max-width: 768px) {
