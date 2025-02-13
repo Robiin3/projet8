@@ -3,7 +3,6 @@
   font-size: 36px;
   text-align: left;
   font-family: Montserrat;
-  margin-bottom: 5px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -35,4 +34,12 @@
   text-align: left;
   font-family: Montserrat;
   margin-top: 0;
+  margin-bottom: 0;
+}
+
+.tags-rating-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
 }

@@ -29,8 +29,10 @@ const Location = () => {
             </div>
           </div>
           <p className="property-location">{property.location}</p> {/* Affiche la localisation du logement */}
-          <Tags tags={property.tags} /> {/* Affiche les tags */}
-          <Rating rating={parseInt(property.rating)} /> {/* Affiche la notation */}
+          <div className="tags-rating-container">
+            <Tags tags={property.tags} /> {/* Affiche les tags */}
+            <Rating rating={parseInt(property.rating)} /> {/* Affiche la notation */}
+          </div>
         </>
       )}
     </div>

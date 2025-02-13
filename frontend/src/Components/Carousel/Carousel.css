@@ -10,6 +10,7 @@
   width: 100%;
   height: 415px;
   object-fit: cover;
+  display: block;
 }
 
 .carousel-button {
@@ -27,7 +28,7 @@
   height: 100%;
 }
 
-/* Supprime le contour en mode focus */
+/* Supprime le contour du bouton en mode focus */
 .carousel-button:focus {
   outline: none;
 }
