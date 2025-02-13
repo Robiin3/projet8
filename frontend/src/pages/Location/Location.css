@@ -4,6 +4,29 @@
   text-align: left;
   font-family: Montserrat;
   margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.property-host {
+  display: flex;
+  align-items: center;
+}
+
+.host-name {
+  color: #FF6060;
+  font-size: 18px;
+  margin-right: 10px;
+  white-space: pre-line; /* Retour à la ligne */
+  text-align: right;
+}
+
+.host-photo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .property-location {
@@ -11,5 +34,5 @@
   font-size: 18px;
   text-align: left;
   font-family: Montserrat;
-  margin-top: 0; /* Remove top margin */
+  margin-top: 0;
 }

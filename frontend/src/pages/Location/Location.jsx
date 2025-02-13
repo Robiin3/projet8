@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Carousel from '../../Components/Carousel/Carousel';
+import Tags from '../../Components/Tags/Tags';
 import './Location.css';
 
 const Location = () => {
@@ -19,8 +20,15 @@ const Location = () => {
       {property && ( // Vérifie si la propriété est définie
         <>
           <Carousel images={property.pictures} />
-          <h1 className="property-title">{property.title}</h1> 
+          <div className="property-title"> 
+            {property.title} 
+            <div className="property-host"> {/* Affiche le nom et la photo de l'hôte */}
+              <span className="host-name">{property.host.name.replace(' ', '\n')}</span> 
+              <img src={property.host.picture} alt={property.host.name} className="host-photo" /> 
+            </div>
+          </div>
           <p className="property-location">{property.location}</p> {/* Affiche la localisation du logement */}
+          <Tags tags={property.tags} /> {/* Affiche les tags */}
         </>
       )}
     </div>
