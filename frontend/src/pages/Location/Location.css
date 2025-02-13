@@ -1,0 +1,15 @@
+.property-title {
+  color: #FF6060;
+  font-size: 36px;
+  text-align: left;
+  font-family: Montserrat;
+  margin-bottom: 5px;
+}
+
+.property-location {
+  color: black;
+  font-size: 18px;
+  text-align: left;
+  font-family: Montserrat;
+  margin-top: 0; /* Remove top margin */
+}

@@ -19,7 +19,8 @@ const Location = () => {
       {property && ( // Vérifie si la propriété est définie
         <>
           <Carousel images={property.pictures} />
-          <h1>{property.title}</h1> 
+          <h1 className="property-title">{property.title}</h1> 
+          <p className="property-location">{property.location}</p> {/* Affiche la localisation du logement */}
         </>
       )}
     </div>
