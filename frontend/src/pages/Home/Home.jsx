@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Banner from '../../Components/Banner/Banner';
 import Card from '../../Components/Card/Card';
 import './Home.css';
@@ -20,11 +21,12 @@ const Home = () => {
       <div className="properties-wrapper">
         <div className="cards-container">
           {properties.map(property => (
-            <Card 
-              key={property.id} 
-              title={property.title}
-              cover={property.pictures[0]}
-            />
+            <Link to={`/location/${property.id}`} key={property.id}>
+              <Card 
+                title={property.title}
+                cover={property.pictures[0]}
+              />
+            </Link>
           ))}
         </div>
       </div>

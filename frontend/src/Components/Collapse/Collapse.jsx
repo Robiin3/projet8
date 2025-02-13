@@ -25,7 +25,7 @@ const Collapse = ({ title, children }) => {
         <ArrowBackIos className={`collapse-chevron ${isOpen ? "open" : "closed"}`} />
       </div>
       <div className={`collapse-content ${isOpen ? "animate" : ""}`}>
-        <p className={isClosing ? "closing" : ""}>{children}</p>
+        <div className={isClosing ? "closing" : ""}>{children}</div>
       </div>
     </div>
   );

@@ -1,20 +1,29 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useParams, Link } from 'react-router-dom';
+import Carousel from '../../Components/Carousel/Carousel';
+import './Location.css';
 
+const Location = () => {
+  const { id } = useParams();
+  const [property, setProperty] = useState(null);
 
-const Location1 = () => {
+  useEffect(() => {
+    fetch(`http://localhost:8080/api/properties/${id}`)
+      .then(response => response.json())
+      .then(data => setProperty(data))
+      .catch(error => console.error('Error:', error));
+  }, [id]);
+
+  if (!property) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/page2">Accueil</Link>
-            </li>
-          </ul>
-        </nav>
-      <h1>Location1</h1>
+      <Carousel images={property.pictures} />
+      <h1>{property.title}</h1>
     </div>
   );
 };
 
-export default Location1;
+export default Location;
