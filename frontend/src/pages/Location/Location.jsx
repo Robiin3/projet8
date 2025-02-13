@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Carousel from '../../Components/Carousel/Carousel';
 import Tags from '../../Components/Tags/Tags';
+import Rating from '../../Components/Rating/Rating';
 import './Location.css';
 
 const Location = () => {
@@ -29,6 +30,7 @@ const Location = () => {
           </div>
           <p className="property-location">{property.location}</p> {/* Affiche la localisation du logement */}
           <Tags tags={property.tags} /> {/* Affiche les tags */}
+          <Rating rating={parseInt(property.rating)} /> {/* Affiche la notation */}
         </>
       )}
     </div>
