@@ -17,31 +17,31 @@ const Location = () => {
       .catch(error => console.error('Error:', error));
   }, [id]); // Exécute l'effet uniquement lorsque l'id change
 
-  return ( // Affiche le carrousel avec les images et le titre de la propriété
+  return (
     <div>
       {property && ( // Vérifie si la propriété est définie
         <>
-          <Carousel images={property.pictures} />
-          <div className="property-title"> 
-            {property.title} 
-            <div className="property-host"> {/* Affiche le nom et la photo de l'hôte */}
-              <span className="host-name">{property.host.name.replace(' ', '\n')}</span> 
-              <img src={property.host.picture} alt={property.host.name} className="host-photo" /> 
+          <Carousel images={property.pictures} /> {/* Affiche le carrousel d'images */}
+          <div className="property-title">
+            {property.title}  {/* Affiche le titre du logement */}
+            <div className="property-host">
+              <span className="host-name">{property.host.name.replace(' ', '\n')}</span> {/* Affiche le nom de l'hôte - Remplace les espaces par des sauts de ligne */}
+              <img src={property.host.picture} alt={property.host.name} className="host-photo" /> {/* Affiche la photo de l'hôte */}
             </div>
           </div>
-          <p className="property-location">{property.location}</p> {/* Affiche la localisation du logement */}
+          <p className="property-location">{property.location}</p> {/* Affiche la localisation */}
           <div className="tags-rating-container">
             <Tags tags={property.tags} /> {/* Affiche les tags */}
             <Rating rating={parseInt(property.rating)} /> {/* Affiche la notation */}
           </div>
-          <div className="collapses-container">
+          <div className="collapses-container"> {/* Affiche les collapses */}
             <Collapse title="Description">
-              <p>{property.description}</p>
+              <p>{property.description}</p> {/* Affiche la description */}
             </Collapse>
             <Collapse title="Équipements">
               <ul>
-                {property.equipments.map((equipment, index) => (
-                  <li key={index}>{equipment}</li>
+                {property.equipments.map((equipment, index) => ( // Affiche la liste des équipements
+                  <li key={index}>{equipment}</li> // Utilise l'index comme clé
                 ))}
               </ul>
             </Collapse>

@@ -53,10 +53,10 @@
 }
 
 .collapse {
-  flex: 1;
+  flex: 1; /* remplit l'espace disponible */
 }
 
 .collapse ul {
-  list-style-type: none; /* Remove bullets */
-  padding-left: 0; /* Remove left padding */
+  list-style-type: none; /* suppr bullets */
+  padding-left: 0;
 }

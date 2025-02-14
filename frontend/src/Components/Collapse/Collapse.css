@@ -55,7 +55,7 @@
 }
 
 .collapse-content p {
-  transform: translateY(-120px); /* Initialement décalé vers le haut */
+  transform: translateY(-160px); /* Initialement décalé vers le haut */
   transition: transform 0.4s;
 }
 
@@ -64,7 +64,7 @@
 }
 
 .collapse-content.animate p.closing {
-  transform: translateY(-120px); /* Remonte vers le haut */
+  transform: translateY(-160px); /* Remonte vers le haut */
 }
 
 .collapse-chevron {
