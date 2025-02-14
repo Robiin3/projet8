@@ -1,6 +1,7 @@
 .rating-container {
   display: flex;
   align-items: center;
+  gap: 4px;
 }
 
 @media (max-width: 768px) {

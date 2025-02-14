@@ -6,18 +6,38 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  /* Allow wrapping for mobile view */
+  margin-bottom: 5px;
+}
+
+/* Conteneur général pour aligner titre et host/rating sur la même ligne */
+.property-header {
+  display: flex;
+  justify-content: space-between;
+  /* Titre à gauche, Hôte + Rating à droite */
+  align-items: center;
+  flex-wrap: wrap;
+  /* Permet le retour à la ligne en mobile */
+}
+
+.title-location-tags-container {
+  width: 70%;
 }
 
 .property-host {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  /* Align to the right */
 }
 
 .host-name {
   color: #FF6060;
   font-size: 18px;
   margin-right: 10px;
-  white-space: pre-line; /* Retour à la ligne */
+  white-space: pre-line;
+  /* Retour à la ligne */
   text-align: right;
 }
 
@@ -37,11 +57,22 @@
   margin-bottom: 10px;
 }
 
+/* Conteneur des tags + rating + hôte */
 .tags-rating-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
+  flex-wrap: wrap;
+  /* Permet de passer sur plusieurs lignes si besoin */
+}
+
+/* Conteneur de l'hôte et du rating */
+.host-rating-container {
+  display: flex;
+  flex-direction: column-reverse;
+  /* Hôte et rating côte à côte */
+  gap: 20px;
 }
 
 .collapses-container {
@@ -53,10 +84,65 @@
 }
 
 .collapse {
-  flex: 1; /* remplit l'espace disponible */
+  flex: 1;
+  /* remplit l'espace disponible */
 }
 
 .collapse ul {
-  list-style-type: none; /* suppr bullets */
+  list-style-type: none;
+  /* suppr bullets */
   padding-left: 0;
+}
+
+/* Version mobile : passer en colonne */
+@media (max-width: 768px) {
+  .tags-rating-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .host-rating-container {
+    flex-direction: row;
+    /* Hôte à droite et rating à gauche */
+    justify-content: space-between;
+    width: 100%;
+    /* Occuper toute la largeur sous les tags */
+  }
+
+  .property-title {
+    font-size: 18px;
+  }
+
+  .title-location-tags-container {
+    width: 100%;
+  }
+
+  .property-location {
+    font-size: 14px;
+  }
+
+  .host-photo {
+    width: 32px;
+    height: 32px;
+  }
+
+  .host-name {
+    font-size: 12px;
+  }
+
+  .host-rating-container {
+    margin-top: 15px;
+  }
+
+  .collapses-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .collapse {
+margin-top: 5px;
+margin-bottom: 6px;
+  }
+
 }

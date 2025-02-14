@@ -82,6 +82,11 @@
   }
 
   .collapse-content {
-    padding: 2px;
+    font-size: 12px;
   }
+
+  .collapse-title {
+    font-size: 13px;
+  }
+
 }

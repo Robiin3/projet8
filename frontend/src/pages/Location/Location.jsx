@@ -22,19 +22,31 @@ const Location = () => {
       {property && ( // Vérifie si la propriété est définie
         <>
           <Carousel images={property.pictures} /> {/* Affiche le carrousel d'images */}
-          <div className="property-title">
-            {property.title}  {/* Affiche le titre du logement */}
-            <div className="property-host">
-              <span className="host-name">{property.host.name.replace(' ', '\n')}</span> {/* Affiche le nom de l'hôte - Remplace les espaces par des sauts de ligne */}
-              <img src={property.host.picture} alt={property.host.name} className="host-photo" /> {/* Affiche la photo de l'hôte */}
+
+          {/* Nouveau conteneur pour organiser titre/localisation et hôte/rating */}
+          <div className="property-header">
+            <div className="title-location-tags-container">
+              <h1 className="property-title">{property.title}</h1> {/* Titre */}
+              <p className="property-location">{property.location}</p> {/* Localisation */}
+              <div className="tags-rating-container">
+                <Tags tags={property.tags} /> {/* Tags */}
+              </div>
+            </div>
+
+
+            <div className="host-rating-container">
+              <Rating rating={parseInt(property.rating)} /> {/* Rating */}
+              <div className="property-host">
+                <span className="host-name">{property.host.name.replace(' ', '\n')}</span>
+                <img src={property.host.picture} alt={property.host.name} className="host-photo" />
+              </div>
             </div>
           </div>
-          <p className="property-location">{property.location}</p> {/* Affiche la localisation */}
-          <div className="tags-rating-container">
-            <Tags tags={property.tags} /> {/* Affiche les tags */}
-            <Rating rating={parseInt(property.rating)} /> {/* Affiche la notation */}
-          </div>
-          <div className="collapses-container"> {/* Affiche les collapses */}
+
+          {/* Conteneur des tags (seul, sous le header) */}
+
+
+          <div className="collapses-container">
             <Collapse title="Description">
               <p>{property.description}</p> {/* Affiche la description */}
             </Collapse>
