@@ -58,4 +58,13 @@
     width: 25%;
     height: 25%;
   }
+
+  .carousel {
+    margin-top: 30px;
+    margin-bottom: 4px;
+  }
+
+  .carousel-image {
+    height: 255px;
+  }
 }

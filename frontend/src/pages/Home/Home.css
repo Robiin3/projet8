@@ -22,9 +22,7 @@
     padding: 0;
     margin: 25px 0;
   }
-}
-
-@media (max-width: 768px) {
+  
   .cards-container {
     gap: 22px;
   }
