@@ -4,6 +4,8 @@
   margin: 0 auto;
   overflow: hidden;
   border-radius: 25px;
+  margin-top: 50px;
+  margin-bottom: 25px;
 }
 
 .carousel-image {

@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import Carousel from '../../Components/Carousel/Carousel';
 import Tags from '../../Components/Tags/Tags';
 import Rating from '../../Components/Rating/Rating';
+import Collapse from '../../Components/Collapse/Collapse';
 import './Location.css';
 
 const Location = () => {
@@ -32,6 +33,18 @@ const Location = () => {
           <div className="tags-rating-container">
             <Tags tags={property.tags} /> {/* Affiche les tags */}
             <Rating rating={parseInt(property.rating)} /> {/* Affiche la notation */}
+          </div>
+          <div className="collapses-container">
+            <Collapse title="Description">
+              <p>{property.description}</p>
+            </Collapse>
+            <Collapse title="Équipements">
+              <ul>
+                {property.equipments.map((equipment, index) => (
+                  <li key={index}>{equipment}</li>
+                ))}
+              </ul>
+            </Collapse>
           </div>
         </>
       )}
