@@ -67,4 +67,8 @@
   .carousel-image {
     height: 255px;
   }
+
+  .carousel-counter {
+display: none;
+  }
 }
