@@ -15,11 +15,11 @@ const App = () => {
         <Header />
         <div className="main-content">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home />} /> {/* Route par défaut */}
             <Route path="Home" element={<Home />} />
             <Route path="/About" element={<About />} />
-            <Route path="/location/:id" element={<Location />} /> {/* Ensure the path matches */}
-            <Route path="*" element={<Error />} />
+            <Route path="/location/:id" element={<Location />} /> {/* :id est un paramètre dynamique */}
+            <Route path="*" element={<Error />} /> {/* attrape toutes les routes non définies */}
           </Routes>
         </div>
         <Footer />
