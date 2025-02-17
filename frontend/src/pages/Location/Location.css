@@ -91,8 +91,8 @@
 /* Version mobile */
 @media (max-width: 768px) {
   .tags-container {
-    flex-direction: column;
-    align-items: flex-start;
+    justify-content: left;
+    margin-top: 0px;
   }
 
   .host-rating-container {
@@ -135,8 +135,8 @@
   }
 
   .collapse {
-margin-top: 5px;
-margin-bottom: 6px;
+    margin-top: 5px;
+    margin-bottom: 6px;
   }
 
 }
