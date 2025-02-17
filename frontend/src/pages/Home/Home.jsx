@@ -5,11 +5,11 @@ import Card from '../../Components/Card/Card';
 import './Home.css';
 import BannerImg from '../../assets/Banner-home.png';
 
-const Home = () => { // Affiche la page d'accueil avec la bannière et les propriétés
+const Home = () => { // Affiche la page d'accueil
   const [properties, setProperties] = useState([]); // Initialise un état properties avec un tableau vide
 
-  useEffect(() => { // Récupère les propriétés depuis l'API
-    fetch('http://localhost:8080/api/properties')
+  useEffect(() => { // Hook pour que React exécute l'effet après le rendu du composant
+    fetch('http://localhost:8080/api/properties') // Récupère les propriétés depuis l'API
       .then(response => response.json()) // Convertit la réponse en JSON
       .then(data => setProperties(data)) // Met à jour l'état properties avec les données
       .catch(error => console.error('Error:', error));
@@ -22,7 +22,7 @@ const Home = () => { // Affiche la page d'accueil avec la bannière et les propr
         <div className="cards-container">
           {properties.map(property => ( // Affiche les propriétés sous forme de cards
             <Link to={`/location/${property.id}`} key={property.id}> {/* Lien vers la page location */}
-              <Card  // Affiche la card avec le titre et la première image de la propriété
+              <Card  // Affiche la card
                 title={property.title} // Affiche le titre de la propriété
                 cover={property.pictures[0]} // Affiche la première image de la propriété
               />

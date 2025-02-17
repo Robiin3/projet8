@@ -7,7 +7,6 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  /* Allow wrapping for mobile view */
   margin-bottom: 5px;
 }
 
@@ -15,10 +14,8 @@
 .property-header {
   display: flex;
   justify-content: space-between;
-  /* Titre à gauche, Hôte + Rating à droite */
   align-items: center;
   flex-wrap: wrap;
-  /* Permet le retour à la ligne en mobile */
 }
 
 .title-location-tags-container {
@@ -29,7 +26,6 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  /* Align to the right */
 }
 
 .host-name {
@@ -57,21 +53,19 @@
   margin-bottom: 10px;
 }
 
-/* Conteneur des tags + rating + hôte */
-.tags-rating-container {
+.tags-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
   flex-wrap: wrap;
-  /* Permet de passer sur plusieurs lignes si besoin */
 }
 
 /* Conteneur de l'hôte et du rating */
 .host-rating-container {
   display: flex;
   flex-direction: column-reverse;
-  /* Hôte et rating côte à côte */
+  /* Hôte au-dessus du rating */
   gap: 20px;
 }
 
@@ -94,9 +88,9 @@
   padding-left: 0;
 }
 
-/* Version mobile : passer en colonne */
+/* Version mobile */
 @media (max-width: 768px) {
-  .tags-rating-container {
+  .tags-container {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -106,7 +100,6 @@
     /* Hôte à droite et rating à gauche */
     justify-content: space-between;
     width: 100%;
-    /* Occuper toute la largeur sous les tags */
   }
 
   .property-title {

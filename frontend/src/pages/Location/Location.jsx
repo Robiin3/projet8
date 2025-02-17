@@ -36,7 +36,7 @@ const Location = () => {
             <div className="title-location-tags-container">
               <h1 className="property-title">{property.title}</h1> {/* Titre */}
               <p className="property-location">{property.location}</p> {/* Localisation */}
-              <div className="tags-rating-container">
+              <div className="tags-container">
                 <Tags tags={property.tags} /> {/* Tags */}
               </div>
             </div>

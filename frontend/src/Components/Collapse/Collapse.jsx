@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Collapse.css';
 import { ArrowBackIos } from "@mui/icons-material";
 
-const Collapse = ({ title, children }) => { // Affiche une section collapse avec un titre et un contenu
+const Collapse = ({ title, children }) => { // Collapse avec un titre et un contenu en props
   const [isOpen, setIsOpen] = useState(false); // État pour savoir si la section est ouverte ou fermée
   const [isClosing, setIsClosing] = useState(false); // État pour savoir si la section est en train de se fermer
 

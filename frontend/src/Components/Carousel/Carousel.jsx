@@ -3,8 +3,8 @@ import './Carousel.css';
 import VectorRight from '../../assets/Vector-right.png';
 import VectorLeft from '../../assets/Vector-left.png';
 
-const Carousel = ({ images }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+const Carousel = ({ images }) => { // Carrousel d'images
+  const [currentIndex, setCurrentIndex] = useState(0); // Initialise un état currentIndex à 0
 
   // Fonction pour passer à l'image précédente
   const handlePrev = () => {

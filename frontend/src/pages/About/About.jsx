@@ -7,8 +7,7 @@ import BannerImg from '../../assets/Banner-about.png';
 const About = () => {
   return (
     <div>
-      {/* Affiche la bannière avec l'image spécifiée */}
-      <Banner image={BannerImg} />
+      <Banner image={BannerImg} /> {/* Affiche la bannière avec l'image */}
       <div className="about-content">
         {/* Affiche les sections collapse avec leurs titres et contenus */}
         <Collapse title="Fiabilité">
